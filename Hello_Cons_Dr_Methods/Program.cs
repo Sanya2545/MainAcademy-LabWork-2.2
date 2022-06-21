@@ -10,26 +10,24 @@ namespace Hello_Cons_Dr_Methods
     {
         static void Main(string[] args)
         {
-            Box box = new Box();
-            List<int> array = box.returnArray();
-            int MaxElement = box.MaxValue(array);
-            Console.WriteLine("Max element : " + MaxElement);
-            //try
-            //{
-            //    //Implement start position, width and height, symbol, message input
-               
-            //    //Create Box class instance
-
-            //    //Use  Box.Draw() method
-
-            //    Console.WriteLine("Press any key...");
-            //Console.ReadLine();
-            //}
-            //catch (Exception)
-            //{
-            //    Console.WriteLine("Error!");
-            //}
             
+            //List<int> array = box.returnArray();
+            //int MaxElement = box.MaxValue(array);
+            //Console.WriteLine("Max element : " + MaxElement);
+            try
+            {
+                int startX = 50, startY = 50, length = 30, width = 5;
+                char symbol = '*';
+                string message = "Hello World ! Lorem ";
+                Box box = new Box(startX, startY, length, width, symbol, message);
+                box.Draw();
+                Console.WriteLine("Press any key...");
+                Console.ReadLine();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error!");
+            }
         }
     }
 }
